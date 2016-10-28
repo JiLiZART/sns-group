@@ -1,0 +1,11 @@
+
+mixin banner(title, desc)
+	+b.banner
+		+e.image
+		+e.header
+			.container
+				.banner__title=title
+				.banner__desc=desc
+		+e.body
+			.container
+				block

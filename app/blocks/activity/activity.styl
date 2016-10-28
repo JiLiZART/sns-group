@@ -1,0 +1,48 @@
+$ctx = activity
+
+.{$ctx}
+	width 100%
+	display flex
+	justify-content space-between
+	flex-wrap wrap
+
+	.{$ctx}__item
+		margin-bottom 30px
+		max-width 300px
+		text-align center
+
+		+mobile()
+			max-width 100%
+
+	.{$ctx}__icon
+		display inline-block
+		width 300px
+		height 200px
+		background-color #232323
+		background-size 95px 95px
+		background-repeat no-repeat
+		background-position 50% 50%
+
+		&.icon_build
+			background-image url('/images/feature__build.png')
+
+		&.icon_design
+			background-image url('/images/feature__design.png')
+
+		&.icon_manage
+			background-image url('/images/feature__manage.png')
+
+	.{$ctx}__title
+		margin-top 28px
+		margin-bottom 13px
+		color white
+		font-size 20px
+		font-weight 300
+		line-height 30px
+
+	.{$ctx}__text
+		color white
+		opacity 0.5
+		font-size 14px
+		font-weight 300
+		line-height 24px

@@ -1,0 +1,35 @@
+include ../header/header
+include ../footer/footer
+include ../banner/banner
+include ../section/section
+include ../countdown/countdown
+include ../container/container
+include ../about/about
+include ../activity/activity
+include ../map/map
+
+mixin index()
+	- var items = [{url: '#about', label: 'О Компании'}, {url: '#activity', label: 'ДЕЯТЕЛЬНОСТЬ'}, {url: '#contact', label: 'КОНТАКТЫ'}];
+
+	+header('SNS Group', items)
+
+	+banner('САЙТ НАХОДИТСЯ В РАЗРАБОТКЕ', 'В данный момент мы обновляем очень важные сервисы, сайт запустится через:')
+		+countdown('2016-12-29')
+
+	+section('about', 'О Компании').section_about
+		+container
+			+about
+				| SNS Group — стремительно развивающийся участник российского рынка жилой и коммерческой недвижимости, осуществляющий весь цикл девелопмента: проектирование, строительство, управление. За спиной - опыт и доверие клиентов, впереди - тысячи квадратных метров успешных проектов. Следите за обновлениями!
+
+	+section('activity', 'ДЕЯТЕЛЬНОСТЬ').section_activity
+		- var activites = [{icon: 'design', title: 'Проектиктирование', desc: 'Our job is to answer the what, why and who questions on the path to uncovering truths behind design decisions and construction.'}, {icon: 'build', title: 'Строительство', desc: 'From drawings to standardized building code, we examine initial findings using a variety of filters to validate our recommendations.'}, {icon: 'manage', title: 'Mенеджмент', desc: 'Our reports include detailed issue descriptions and resulting damages to ensure the integrity of subsequent construction efforts.'}];
+
+		+container
+			+activity(activites)
+
+	+section('contact', 'КОНТАКТЫ').section_contact
+		+map(55.7854971, 37.2384205, '/images/map__marker.png')
+			| SNS Group — стремительно развивающийся участник российского рынка жилой и коммерческой недвижимости, осуществляющий весь цикл девелопмента: проектирование, строительство, управление. За спиной - опыт и доверие клиентов, впереди - тысячи квадратных метров успешных проектов. Следите за обновлениями!
+
+
+	+footer()

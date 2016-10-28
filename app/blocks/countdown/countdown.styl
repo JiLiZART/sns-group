@@ -1,0 +1,99 @@
+$ctx = countdown
+
+.{$ctx}
+	display inline-flex
+	margin 0 auto
+
+	.{$ctx}__label
+		opacity 0.87
+		color white
+		font-size 14px
+		font-weight 300
+		letter-spacing 1px
+		line-height 30px
+		text-transform uppercase
+
+		+mobile()
+			font-size 13px
+
+	.{$ctx}__value
+		position relative
+		display block
+		width 56px
+		height 81px
+		color white
+		font-size 75px
+		font-weight 400
+		line-height 81px
+		text-align center
+		z-index 4
+
+		+mobile()
+			width (56/2)px
+			height (82/2)px
+			line-height (82/2)px
+			font-size (76/2)px
+
+	.{$ctx}__group
+		padding-bottom 50px
+		margin-right 16px
+		position relative
+		display flex
+
+		+mobile()
+			padding-bottom (60/2)px
+			margin-right (16/2)px
+
+		.{$ctx}__label
+			position absolute
+			bottom 0
+			left 0
+			right 0
+			text-align center
+
+	.{$ctx}__figure
+		margin-right 4px
+		position relative
+		width 56px
+		height 81px
+		background-color #282828
+		border-radius 6px
+
+		+mobile()
+			width (56/2)px
+			height (82/2)px
+
+		&:before
+			content ''
+			position absolute
+			top 50%
+			left 0
+			right 0
+			z-index 5
+			width 100%
+			height 1px
+			transform translateY(-50%)
+			background-color #282828
+
+	.{$ctx}__top
+	.{$ctx}__bottom
+		position absolute
+		left 0
+		right 0
+		z-index 2
+		width 56px
+		height 40px
+
+		+mobile()
+			width (56/2)px
+			height (40)px
+
+	.{$ctx}__top
+		top 0
+		background-color #161616
+		border-radius 6px 6px 0 0
+
+	.{$ctx}__bottom
+		bottom 0
+		background-color #1c1c1c
+		border-radius 0 0 6px 6px

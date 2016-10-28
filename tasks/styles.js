@@ -5,11 +5,11 @@ import rupture from 'rupture';
 import stylint from 'gulp-stylint';
 import stylus from 'gulp-stylus';
 import importIfExist from 'stylus-import-if-exist';
-import autoprefixer from 'autoprefixer-stylus';
 import gcmq from 'gulp-group-css-media-queries';
 import nano from 'gulp-cssnano';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
+import postcss from 'gulp-postcss';
 import errorHandler from 'gulp-plumber-error-handler';
 
 const isDebug = process.env.NODE_ENV !== 'production';
@@ -22,10 +22,14 @@ gulp.task('styles', () => (
 			use: [
 				importIfExist(),
 				rupture(),
-				autoprefixer()
 			],
 			'include css': true
 		}))
+		.pipe(postcss([
+			require('postcss-inline-svg')(),
+			require('lost')(),
+			require('autoprefixer')()
+		]))
 		.pipe(gulpIf(!isDebug, gcmq()))
 		.pipe(gulpIf(!isDebug, nano({zindex: false})))
 		.pipe(rename({suffix: '.min'}))

@@ -1,0 +1,19 @@
+include ../container/container
+include ../logo/logo
+
+mixin footer()
+	+b.footer
+		+container.footer__container
+			.footer__col
+				+logo
+			.footer__col
+				.footer__label АДРЕС —
+				.footer__text 143421, Красногорский р-н, 9-ый км Новорижского ш., БЦ «RIGA LAND», стр. 5, п-д 4,  этаж 5.
+
+			.footer__col
+				.footer__label КОНТАКТЫ —
+				.footer__text
+					.footer__tel T —
+						a.link.link_dark(href="tel:+74953071139") +7(495) 307 11 39
+					.footer__email E — info@snsgroup.ru
+						a.link.link_dark(href="mailto:info@snsgroup.ru") info@snsgroup.ru

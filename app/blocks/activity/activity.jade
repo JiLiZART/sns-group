@@ -1,0 +1,8 @@
+
+mixin activity(items)
+	+b.activity
+		each item in items
+			+e.item
+				+e.icon(class="icon_#{item.icon}")
+				+e.title=item.title
+				+e.text=item.desc

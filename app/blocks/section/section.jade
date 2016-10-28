@@ -1,0 +1,7 @@
+
+mixin section(href, title)
+	+b.section(id=href)
+		+e.header
+			+e.title=title
+		+e.body
+			block

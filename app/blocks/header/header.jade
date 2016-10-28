@@ -1,0 +1,17 @@
+include ../container/container
+include ../logo/logo
+
+mixin header(t, items)
+	+b.header
+		+container
+			.header__logo
+				+logo('/', t)
+
+			.header__menu-bar
+				.header__bar-line
+				.header__bar-line
+				.header__bar-line
+
+			.header__menu
+				each item in items
+					a.header__menu-item(href=item.url)=item.label

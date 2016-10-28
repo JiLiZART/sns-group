@@ -1,0 +1,10 @@
+mixin countdown(time)
+	+b.countdown('data-countdown'=time)&attributes(attributes)
+		each val in [{id:'day', l: 'дней'}, {id:'hour', l: 'часов'}, {id:'minute', l:'минут'}, {id:'second', l:'секунд'}]
+			+e.group
+				+e.label=val.l
+				each type in [1, 2]
+					+e.figure
+						+e.top
+						+e.value('data-countdown-key'=val.id)=0
+						+e.bottom
