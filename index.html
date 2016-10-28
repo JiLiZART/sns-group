@@ -130,253 +130,255 @@
 				</div>
 			</div>
 		</div>
-		<div id="about" class="section">
-			<div class="section__header">
-				<div class="section__title">О Компании</div>
-			</div>
-			<div class="section__body">
-				<div class="container">
-					<div class="about">SNS Group — стремительно развивающийся участник российского рынка жилой и коммерческой недвижимости, осуществляющий
-						весь цикл девелопмента: проектирование, строительство, управление. За спиной - опыт и доверие клиентов, впереди - тысячи
-						квадратных метров успешных проектов. Следите за обновлениями!</div>
+		<div class="main">
+			<div id="about" class="section">
+				<div class="section__header">
+					<div class="section__title">О Компании</div>
+				</div>
+				<div class="section__body">
+					<div class="container">
+						<div class="about">SNS Group — стремительно развивающийся участник российского рынка жилой и коммерческой недвижимости, осуществляющий
+							весь цикл девелопмента: проектирование, строительство, управление. За спиной - опыт и доверие клиентов, впереди -
+							тысячи квадратных метров успешных проектов. Следите за обновлениями!</div>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="activity" class="section">
-			<div class="section__header">
-				<div class="section__title">ДЕЯТЕЛЬНОСТЬ</div>
-			</div>
-			<div class="section__body">
-				<div class="container">
-					<div class="activity">
-						<div class="activity__item">
-							<div class="activity__icon icon icon_design"></div>
-							<div class="activity__title">Проектиктирование</div>
-							<div class="activity__text">Our job is to answer the what, why and who questions on the path to uncovering truths behind design decisions and
-								construction.</div>
-						</div>
-						<div class="activity__item">
-							<div class="activity__icon icon icon_build"></div>
-							<div class="activity__title">Строительство</div>
-							<div class="activity__text">From drawings to standardized building code, we examine initial findings using a variety of filters to validate our
-								recommendations.</div>
-						</div>
-						<div class="activity__item">
-							<div class="activity__icon icon icon_manage"></div>
-							<div class="activity__title">Mенеджмент</div>
-							<div class="activity__text">Our reports include detailed issue descriptions and resulting damages to ensure the integrity of subsequent construction
-								efforts.</div>
+			<div id="activity" class="section">
+				<div class="section__header">
+					<div class="section__title">ДЕЯТЕЛЬНОСТЬ</div>
+				</div>
+				<div class="section__body">
+					<div class="container">
+						<div class="activity">
+							<div class="activity__item">
+								<div class="activity__icon icon icon_design"></div>
+								<div class="activity__title">Проектиктирование</div>
+								<div class="activity__text">Our job is to answer the what, why and who questions on the path to uncovering truths behind design decisions and
+									construction.</div>
+							</div>
+							<div class="activity__item">
+								<div class="activity__icon icon icon_build"></div>
+								<div class="activity__title">Строительство</div>
+								<div class="activity__text">From drawings to standardized building code, we examine initial findings using a variety of filters to validate our
+									recommendations.</div>
+							</div>
+							<div class="activity__item">
+								<div class="activity__icon icon icon_manage"></div>
+								<div class="activity__title">Mенеджмент</div>
+								<div class="activity__text">Our reports include detailed issue descriptions and resulting damages to ensure the integrity of subsequent construction
+									efforts.</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div id="contact" class="section">
-			<div class="section__header">
-				<div class="section__title">КОНТАКТЫ</div>
-			</div>
-			<div class="section__body">
-				<div id="map" class="map"></div>
-				<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ3FoOUT9B81UbknmQgbxLfES8gaiykoA"></script>
-				<script>
-					var map;
+			<div id="contact" class="section">
+				<div class="section__header">
+					<div class="section__title">КОНТАКТЫ</div>
+				</div>
+				<div class="section__body">
+					<div id="map" class="map"></div>
+					<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ3FoOUT9B81UbknmQgbxLfES8gaiykoA"></script>
+					<script>
+						var map;
 
-					// When the window has finished loading create our google map below
-					google.maps.event.addDomListener(window, 'load', init);
-					google.maps.event.addDomListener(window, "resize", function()
-					{
-						var center = map.getCenter();
-						google.maps.event.trigger(map, "resize");
-						map.setCenter(center);
-					});
-
-					function init()
-					{
-						var mapOptions = {
-							zoom: 12,
-
-							center: new google.maps.LatLng('55.7854971', '37.2384205'),
-
-							draggable: false,
-							scrollwheel: false,
-							zoomControl: false,
-							streetView: false,
-							panControl: false,
-
-							disableDefaultUI: true,
-
-							styles: [
-							{
-								"featureType": "all",
-								"elementType": "labels.text.fill",
-								"stylers": [
-								{
-									"saturation": 36
-								},
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 40
-								}]
-							},
-							{
-								"featureType": "all",
-								"elementType": "labels.text.stroke",
-								"stylers": [
-								{
-									"visibility": "on"
-								},
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 16
-								}]
-							},
-							{
-								"featureType": "all",
-								"elementType": "labels.icon",
-								"stylers": [
-								{
-									"visibility": "off"
-								}]
-							},
-							{
-								"featureType": "administrative",
-								"elementType": "geometry.fill",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 20
-								}]
-							},
-							{
-								"featureType": "administrative",
-								"elementType": "geometry.stroke",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 17
-								},
-								{
-									"weight": 1.2
-								}]
-							},
-							{
-								"featureType": "landscape",
-								"elementType": "geometry",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 20
-								}]
-							},
-							{
-								"featureType": "poi",
-								"elementType": "geometry",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 21
-								}]
-							},
-							{
-								"featureType": "road.highway",
-								"elementType": "geometry.fill",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 17
-								}]
-							},
-							{
-								"featureType": "road.highway",
-								"elementType": "geometry.stroke",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 29
-								},
-								{
-									"weight": 0.2
-								}]
-							},
-							{
-								"featureType": "road.arterial",
-								"elementType": "geometry",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 18
-								}]
-							},
-							{
-								"featureType": "road.local",
-								"elementType": "geometry",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 16
-								}]
-							},
-							{
-								"featureType": "transit",
-								"elementType": "geometry",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 19
-								}]
-							},
-							{
-								"featureType": "water",
-								"elementType": "geometry",
-								"stylers": [
-								{
-									"color": "#000000"
-								},
-								{
-									"lightness": 17
-								}]
-							}]
-						};
-
-						// Get the HTML DOM element that will contain your map
-						// We are using a div with id="map" seen below in the <body>
-						var mapElement = document.getElementById('map');
-
-						// Create the Google Map using our element and options defined above
-						map = new google.maps.Map(mapElement, mapOptions);
-
-						// Let's also add a marker while we're at it
-						var marker = new google.maps.Marker(
+						// When the window has finished loading create our google map below
+						google.maps.event.addDomListener(window, 'load', init);
+						google.maps.event.addDomListener(window, "resize", function()
 						{
-							position: new google.maps.LatLng('55.7854971', '37.2384205'),
-							map: map,
-							icon: 'images/map__marker.png'
+							var center = map.getCenter();
+							google.maps.event.trigger(map, "resize");
+							map.setCenter(center);
 						});
-					}
 
-				</script>
+						function init()
+						{
+							var mapOptions = {
+								zoom: 12,
+
+								center: new google.maps.LatLng('55.7854971', '37.2384205'),
+
+								draggable: false,
+								scrollwheel: false,
+								zoomControl: false,
+								streetView: false,
+								panControl: false,
+
+								disableDefaultUI: true,
+
+								styles: [
+								{
+									"featureType": "all",
+									"elementType": "labels.text.fill",
+									"stylers": [
+									{
+										"saturation": 36
+									},
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 40
+									}]
+								},
+								{
+									"featureType": "all",
+									"elementType": "labels.text.stroke",
+									"stylers": [
+									{
+										"visibility": "on"
+									},
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 16
+									}]
+								},
+								{
+									"featureType": "all",
+									"elementType": "labels.icon",
+									"stylers": [
+									{
+										"visibility": "off"
+									}]
+								},
+								{
+									"featureType": "administrative",
+									"elementType": "geometry.fill",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 20
+									}]
+								},
+								{
+									"featureType": "administrative",
+									"elementType": "geometry.stroke",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 17
+									},
+									{
+										"weight": 1.2
+									}]
+								},
+								{
+									"featureType": "landscape",
+									"elementType": "geometry",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 20
+									}]
+								},
+								{
+									"featureType": "poi",
+									"elementType": "geometry",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 21
+									}]
+								},
+								{
+									"featureType": "road.highway",
+									"elementType": "geometry.fill",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 17
+									}]
+								},
+								{
+									"featureType": "road.highway",
+									"elementType": "geometry.stroke",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 29
+									},
+									{
+										"weight": 0.2
+									}]
+								},
+								{
+									"featureType": "road.arterial",
+									"elementType": "geometry",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 18
+									}]
+								},
+								{
+									"featureType": "road.local",
+									"elementType": "geometry",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 16
+									}]
+								},
+								{
+									"featureType": "transit",
+									"elementType": "geometry",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 19
+									}]
+								},
+								{
+									"featureType": "water",
+									"elementType": "geometry",
+									"stylers": [
+									{
+										"color": "#000000"
+									},
+									{
+										"lightness": 17
+									}]
+								}]
+							};
+
+							// Get the HTML DOM element that will contain your map
+							// We are using a div with id="map" seen below in the <body>
+							var mapElement = document.getElementById('map');
+
+							// Create the Google Map using our element and options defined above
+							map = new google.maps.Map(mapElement, mapOptions);
+
+							// Let's also add a marker while we're at it
+							var marker = new google.maps.Marker(
+							{
+								position: new google.maps.LatLng('55.7854971', '37.2384205'),
+								map: map,
+								icon: 'images/map__marker.png'
+							});
+						}
+
+					</script>
+				</div>
 			</div>
 		</div>
 		<div class="footer">
