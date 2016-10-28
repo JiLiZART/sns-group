@@ -1,8 +1,8 @@
 
-mixin map(lat, lng, image)
+mixin map(lat, lng, image, key)
 	+b.map(id='map')
 
-	script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js")
+	script(type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=#{key}")
 	script.
 		var map;
 
